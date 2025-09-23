@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 class Conversation implements ConversationRequirements {
 
   // Attributes 
@@ -7,14 +7,25 @@ class Conversation implements ConversationRequirements {
    * Constructor 
    */
   Conversation() {
+
     
+
   }
 
   /**
    * Starts and runs the conversation with the user
    */
   public void chat() {
+    System.out.println("How many rounds?");
+    Scanner scan = new Scanner(System.in);
+    int rounds = scan.nextInt();
 
+    for (int i = 0; i < rounds; i++){
+      String input = scan.nextLine();
+      respond(input);
+    }
+
+    scan.close();
   }
 
   /**
